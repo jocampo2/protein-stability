@@ -1,0 +1,51 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\bibstyle{abbrvnat}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Problem analysis}{1}{section.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:lengths}{{1a}{1}{$\Delta \Delta $G vs protein length\relax }{figure.caption.1}{}}
+\newlabel{sub@fig:lengths}{{a}{1}{$\Delta \Delta $G vs protein length\relax }{figure.caption.1}{}}
+\newlabel{fig:position}{{1b}{1}{$\Delta \Delta $G vs mutation position\relax }{figure.caption.1}{}}
+\newlabel{sub@fig:position}{{b}{1}{$\Delta \Delta $G vs mutation position\relax }{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 2D histograms of $\Delta \Delta $G vs protein length or mutation position (as a fraction of the protein length). For fair comparison at each length, we've normalized each row of the histogram by the max. It seems like there is not much correlation with length, only slightly less energy for lower lengths. Presumably, this is because there are less electrostatic interactions for shorter proteins, but because they can fold in all sorts of ways, there is a spread in $\Delta \Delta $G. There's not much correlation with mutation position either, except at the ends of the protein which have mostly no change in $\Delta \Delta $G, presumably because there are less atoms and bonds around the ends of the protein.\relax }}{1}{figure.caption.1}\protected@file@percent }
+\newlabel{fig:lenpos}{{1}{1}{2D histograms of $\Delta \Delta $G vs protein length or mutation position (as a fraction of the protein length). For fair comparison at each length, we've normalized each row of the histogram by the max. It seems like there is not much correlation with length, only slightly less energy for lower lengths. Presumably, this is because there are less electrostatic interactions for shorter proteins, but because they can fold in all sorts of ways, there is a spread in \dd G. There's not much correlation with mutation position either, except at the ends of the protein which have mostly no change in \dd G, presumably because there are less atoms and bonds around the ends of the protein.\relax }{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces $\Delta \Delta $G histograms, for 10 wildtypes (\texttt  {pdbid}). This clearly shows that $\Delta \Delta $G is dependant on the wildtype which makes sense since it should depend on the structure.\relax }}{2}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:wildtype}{{2}{2}{$\Delta \Delta $G histograms, for 10 wildtypes (\texttt {pdbid}). This clearly shows that \dd G is dependant on the wildtype which makes sense since it should depend on the structure.\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces $\Delta \Delta $G histograms, for 10 different mutation types (wildtype amino acid $\rightarrow $ mutant amino acid). The distributions seem to be slightly different for each mutation since the energy should depend on the amino acid substitution.\relax }}{2}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:mutation}{{3}{2}{$\Delta \Delta $G histograms, for 10 different mutation types (wildtype amino acid $\rightarrow $ mutant amino acid). The distributions seem to be slightly different for each mutation since the energy should depend on the amino acid substitution.\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Method explanation}{2}{section.2}\protected@file@percent }
+\citation{Wang2021}
+\citation{Wang2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces LSTM model used for predicintg $\Delta \Delta $G. The inputs are one-hot encodings of the amino acid sequence, with a -1 inserted for the wild type amino acid.\relax }}{3}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:lstm}{{4}{3}{LSTM model used for predicintg $\Delta \Delta $G. The inputs are one-hot encodings of the amino acid sequence, with a -1 inserted for the wild type amino acid.\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Experiment description}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Result Analysis}{3}{section.4}\protected@file@percent }
+\newlabel{fig:lstme}{{5a}{4}{LSTM, \dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:lstme}{{a}{4}{LSTM, \dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{fig:lstmae}{{5b}{4}{anti-symmetric LSTM, \dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:lstmae}{{b}{4}{anti-symmetric LSTM, \dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{fig:lstmre}{{5c}{4}{LSTM, $-$\dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:lstmre}{{c}{4}{LSTM, $-$\dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{fig:lstmare}{{5d}{4}{anti-symmetric LSTM, $-$\dd G predictions\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:lstmare}{{d}{4}{anti-symmetric LSTM, $-$\dd G predictions\relax }{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces True vs predicted $\pm $$\Delta \Delta $G using the (non-)anti-symmetric LSTM models.\relax }}{4}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:results}{{5}{4}{True vs predicted $\pm $\dd G using the (non-)anti-symmetric LSTM models.\relax }{figure.caption.5}{}}
+\bibdata{biblio.bib}
+\bibcite{Wang2021}{{1}{2021}{{Wang et~al.}}{{Wang, Tang, Shan, and Zuo}}}
+\gdef \@abspage@last{5}
