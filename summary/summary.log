@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.4)  16 JAN 2023 09:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.4)  16 JAN 2023 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -322,11 +322,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 34.
-<plots/protein_lengths.png, id=23, 421.575pt x 324.7332pt>
+<plots/protein_lengths.png, id=28, 421.575pt x 324.7332pt>
 File: plots/protein_lengths.png Graphic file (type png)
 <use plots/protein_lengths.png>
 Package pdftex.def Info: plots/protein_lengths.png  used on input line 42.
-(pdftex.def)             Requested size: 204.85846pt x 157.80261pt.
+(pdftex.def)             Requested size: 182.09486pt x 140.26678pt.
 LaTeX Font Info:    Calculating math sizes for size <10.95007> on input line 43.
 
 
@@ -347,12 +347,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7.66501> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.47504> on input line 43.
-<plots/mutation_position.png, id=25, 425.9112pt x 324.7332pt>
+<plots/mutation_position.png, id=30, 425.9112pt x 324.7332pt>
 File: plots/mutation_position.png Graphic file (type png)
 <use plots/mutation_position.png>
 Package pdftex.def Info: plots/mutation_position.png  used on input line 49.
-(pdftex.def)             Requested size: 204.85846pt x 156.19223pt.
-<plots/wildtype.png, id=26, 701.5008pt x 291.0072pt>
+(pdftex.def)             Requested size: 182.09486pt x 138.8348pt.
+<plots/wildtype.png, id=31, 701.5008pt x 291.0072pt>
 File: plots/wildtype.png Graphic file (type png)
 <use plots/wildtype.png>
 Package pdftex.def Info: plots/wildtype.png  used on input line 60.
@@ -360,45 +360,43 @@ Package pdftex.def Info: plots/wildtype.png  used on input line 60.
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./plots/protein_lengths.png> <./plots/mutation_position.png>]
-<plots/mutation.png, id=42, 701.5008pt x 291.0072pt>
+<plots/mutation.png, id=52, 701.5008pt x 291.0072pt>
 File: plots/mutation.png Graphic file (type png)
 <use plots/mutation.png>
 Package pdftex.def Info: plots/mutation.png  used on input line 68.
 (pdftex.def)             Requested size: 455.24411pt x 188.85936pt.
  [2 <./plots/wildtype.png> <./plots/mutation.png>]
-<lstm.pdf, id=52, 713.66624pt x 283.0575pt>
+<lstm.pdf, id=62, 713.66624pt x 283.0575pt>
 File: lstm.pdf Graphic file (type pdf)
 <use lstm.pdf>
 Package pdftex.def Info: lstm.pdf  used on input line 81.
 (pdftex.def)             Requested size: 364.19667pt x 144.4481pt.
+ [3
 
-Overfull \hbox (7.92pt too wide) in paragraph at lines 90--91
-\OT1/cmr/m/n/12 mu-tant (M) amino acid is re-versed which should give $^^A^^A$G(W$\OMS/cmsy/m/n/12 !$\OT1/cmr/m/n/12 M)=$\OMS/cmsy/m/n/12 ^^@$$\OT1/cmr/m/n/12 ^^A^^A$G(M$\OMS/cmsy/m/n/12 !$\OT1/cmr/m/n/12 W). 
- []
-
-<plots/lstm_error.png, id=62, 399.894pt x 398.4486pt>
+ <./lstm.pdf>]
+<plots/lstm_error.png, id=95, 399.894pt x 398.4486pt>
 File: plots/lstm_error.png Graphic file (type png)
 <use plots/lstm_error.png>
-Package pdftex.def Info: plots/lstm_error.png  used on input line 102.
+Package pdftex.def Info: plots/lstm_error.png  used on input line 105.
 (pdftex.def)             Requested size: 223.07211pt x 222.26634pt.
-<plots/lstmanti_error.png, id=63, 399.894pt x 398.4486pt>
+<plots/lstmanti_error.png, id=96, 399.894pt x 398.4486pt>
 File: plots/lstmanti_error.png Graphic file (type png)
 <use plots/lstmanti_error.png>
-Package pdftex.def Info: plots/lstmanti_error.png  used on input line 109.
+Package pdftex.def Info: plots/lstmanti_error.png  used on input line 112.
 (pdftex.def)             Requested size: 223.07211pt x 222.26634pt.
-<plots/lstm_error_reverse.png, id=64, 399.894pt x 398.4486pt>
+<plots/lstm_error_reverse.png, id=97, 399.894pt x 398.4486pt>
 File: plots/lstm_error_reverse.png Graphic file (type png)
 <use plots/lstm_error_reverse.png>
-Package pdftex.def Info: plots/lstm_error_reverse.png  used on input line 116.
+Package pdftex.def Info: plots/lstm_error_reverse.png  used on input line 119.
 (pdftex.def)             Requested size: 223.07211pt x 222.26634pt.
-<plots/lstmanti_error_reverse.png, id=65, 399.894pt x 398.4486pt>
+<plots/lstmanti_error_reverse.png, id=98, 399.894pt x 398.4486pt>
 File: plots/lstmanti_error_reverse.png Graphic file (type png)
 <use plots/lstmanti_error_reverse.png>
-Package pdftex.def Info: plots/lstmanti_error_reverse.png  used on input line 123.
+Package pdftex.def Info: plots/lstmanti_error_reverse.png  used on input line 126.
 (pdftex.def)             Requested size: 223.07211pt x 222.26634pt.
-[3
+ [4
 
- <./lstm.pdf>] [4 <./plots/lstm_error.png> <./plots/lstmanti_error.png> <./plots/lstm_error_reverse.png> <./plots/lstmanti_error_reverse.png>] (./summary.bbl) [5
+ <./plots/lstm_error.png> <./plots/lstmanti_error.png> <./plots/lstm_error_reverse.png> <./plots/lstmanti_error_reverse.png>] (./summary.bbl) [5
 
 ] (./summary.aux)
 
@@ -409,18 +407,18 @@ Package rerunfilecheck Info: File `summary.out' has not changed.
 (rerunfilecheck)             Checksum: EF38DDBFD187DEB58D3A1239CFD558D3;539.
  ) 
 Here is how much of TeX's memory you used:
- 11486 strings out of 478268
- 186252 string characters out of 5846348
- 501109 words of memory out of 5000000
- 29539 multiletter control sequences out of 15000+600000
+ 11507 strings out of 478268
+ 186613 string characters out of 5846348
+ 504711 words of memory out of 5000000
+ 29555 multiletter control sequences out of 15000+600000
  474945 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,117p,1234b,631s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,8n,117p,1292b,631s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on summary.pdf (5 pages, 728608 bytes).
+Output written on summary.pdf (5 pages, 739159 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

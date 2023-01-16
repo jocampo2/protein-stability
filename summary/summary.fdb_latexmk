@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex summary"] 1673862230 "summary.aux" "summary.bbl" "summary" 1673862232
-  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "biblio.bib" 1673798831 1955 157bb102006ab4411e9e4629fb40ad96 ""
-  "summary.aux" 1673862232 6274 a780bc2bf715c0b0a99e73dda1e48a86 "pdflatex"
+["bibtex summary"] 1673872713 "summary.aux" "summary.bbl" "summary" 1673872715
+  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
+  "biblio.bib" 1673871932 4072 a8e6f85b2bc8dc99d0ad1206d54a4c86 ""
+  "summary.aux" 1673872715 7227 53913aac9afb0313013a6d9a11bb5a6d "pdflatex"
   (generated)
   "summary.bbl"
   "summary.blg"
-["pdflatex"] 1673862230 "/Users/jeremyocampo/instadeep/summary/summary.tex" "summary.pdf" "summary" 1673862232
-  "/Users/jeremyocampo/instadeep/summary/summary.tex" 1673862229 9052 fc80a277c763495ea96b62487060aa72 ""
+["pdflatex"] 1673872713 "/Users/jeremyocampo/instadeep/summary/summary.tex" "summary.pdf" "summary" 1673872715
+  "/Users/jeremyocampo/instadeep/summary/summary.tex" 1673872712 10274 7e80a17b75106bbb5c67011fb789ce02 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -102,10 +102,10 @@
   "plots/mutation_position.png" 1673861992 35979 35398b87446e13440d07856f5bf7f181 ""
   "plots/protein_lengths.png" 1673861992 36708 409c101a21084090465af66af40e8485 ""
   "plots/wildtype.png" 1673861992 40763 e200f40ab438fe11ad8e000936d2f646 ""
-  "summary.aux" 1673862232 6274 a780bc2bf715c0b0a99e73dda1e48a86 "pdflatex"
-  "summary.bbl" 1673862230 649 f4cc1abe6ef98f6696593fff2657a15d "bibtex summary"
-  "summary.out" 1673862232 539 ef38ddbfd187deb58d3a1239cfd558d3 "pdflatex"
-  "summary.tex" 1673862229 9052 fc80a277c763495ea96b62487060aa72 ""
+  "summary.aux" 1673872715 7227 53913aac9afb0313013a6d9a11bb5a6d "pdflatex"
+  "summary.bbl" 1673872713 2520 0914fd53b436e7465ea0a1aee373fa5e "bibtex summary"
+  "summary.out" 1673872715 539 ef38ddbfd187deb58d3a1239cfd558d3 "pdflatex"
+  "summary.tex" 1673872712 10274 7e80a17b75106bbb5c67011fb789ce02 ""
   (generated)
   "summary.aux"
   "summary.log"

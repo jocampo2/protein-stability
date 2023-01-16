@@ -16,7 +16,12 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\bibstyle{abbrvnat}
+\bibstyle{plainnat}
+\citation{Brooks}
+\citation{Wang2021}
+\citation{Alvarez-Machancoses}
+\citation{Benevenuta_2021}
+\citation{lstm}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Problem analysis}{1}{section.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:lengths}{{1a}{1}{$\Delta \Delta $G vs protein length\relax }{figure.caption.1}{}}
@@ -30,12 +35,13 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces $\Delta \Delta $G histograms, for 10 different mutation types (wildtype amino acid $\rightarrow $ mutant amino acid). The distributions seem to be slightly different for each mutation since the energy should depend on the amino acid substitution.\relax }}{2}{figure.caption.3}\protected@file@percent }
 \newlabel{fig:mutation}{{3}{2}{$\Delta \Delta $G histograms, for 10 different mutation types (wildtype amino acid $\rightarrow $ mutant amino acid). The distributions seem to be slightly different for each mutation since the energy should depend on the amino acid substitution.\relax }{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Method explanation}{2}{section.2}\protected@file@percent }
-\citation{Wang2021}
-\citation{Wang2021}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces LSTM model used for predicintg $\Delta \Delta $G. The inputs are one-hot encodings of the amino acid sequence, with a -1 inserted for the wild type amino acid.\relax }}{3}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:lstm}{{4}{3}{LSTM model used for predicintg $\Delta \Delta $G. The inputs are one-hot encodings of the amino acid sequence, with a -1 inserted for the wild type amino acid.\relax }{figure.caption.4}{}}
+\citation{lstmwiki}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces LSTM model used for predicintg $\Delta \Delta $G. The inputs are one-hot encodings of the amino acid sequence, with a $-1$ inserted for the wild type amino acid. This makes the one-hot mutation anti-symmetric, i.e the swapping operation $S$ on the one-hot mutation $x$ gives $Sx = -x$.\relax }}{3}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:lstm}{{4}{3}{LSTM model used for predicintg $\Delta \Delta $G. The inputs are one-hot encodings of the amino acid sequence, with a $-1$ inserted for the wild type amino acid. This makes the one-hot mutation anti-symmetric, i.e the swapping operation $S$ on the one-hot mutation $x$ gives $Sx = -x$.\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Experiment description}{3}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Result Analysis}{3}{section.4}\protected@file@percent }
+\citation{Wang2021}
+\citation{Wang2021}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Result Analysis}{4}{section.4}\protected@file@percent }
 \newlabel{fig:lstme}{{5a}{4}{LSTM, \dd G predictions\relax }{figure.caption.5}{}}
 \newlabel{sub@fig:lstme}{{a}{4}{LSTM, \dd G predictions\relax }{figure.caption.5}{}}
 \newlabel{fig:lstmae}{{5b}{4}{anti-symmetric LSTM, \dd G predictions\relax }{figure.caption.5}{}}
@@ -47,5 +53,10 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces True vs predicted $\pm $$\Delta \Delta $G using the (non-)anti-symmetric LSTM models.\relax }}{4}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:results}{{5}{4}{True vs predicted $\pm $\dd G using the (non-)anti-symmetric LSTM models.\relax }{figure.caption.5}{}}
 \bibdata{biblio.bib}
-\bibcite{Wang2021}{{1}{2021}{{Wang et~al.}}{{Wang, Tang, Shan, and Zuo}}}
+\bibcite{lstmwiki}{{1}{}{{lst}}{{}}}
+\bibcite{Alvarez-Machancoses}{{2}{2019}{{Alvarez-Machancoses et~al.}}{{Alvarez-Machancoses, De~Andres-Galiana, Fernandez-Martinez, and Kloczkowski}}}
+\bibcite{Benevenuta_2021}{{3}{2021}{{Benevenuta et~al.}}{{Benevenuta, Pancotti, Fariselli, Birolo, and Sanavia}}}
+\bibcite{Brooks}{{4}{2009}{{Brooks et~al.}}{{Brooks, Brooks, 3rd, Jr, Petrella, Roux, Won, Archontis, Bartels, Boresch, Caflisch, Caves, Cui, Dinner, Feig, Fischer, Gao, Hodoscek, Im, Kuczera, and Karplus}}}
+\bibcite{lstm}{{5}{1997}{{Hochreiter and Schmidhuber}}{{}}}
+\bibcite{Wang2021}{{6}{2021}{{Wang et~al.}}{{Wang, Tang, Shan, and Zuo}}}
 \gdef \@abspage@last{5}

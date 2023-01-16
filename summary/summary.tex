@@ -13,8 +13,8 @@
 
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{natbib}
-\bibliographystyle{abbrvnat}
+\usepackage[numbers]{natbib}
+\bibliographystyle{plainnat}
 \usepackage{titlesec}
 \newcommand{\dd}{$\Delta\Delta$}
 \titleformat*{\section}{\large\bfseries}
@@ -31,20 +31,20 @@
 \end{center}
 
 \section{Problem analysis}
-Understanding the mechanisms in protein stability is important, since even a single amino acid mutation can be the cause of a disease. The effect of a mutation on a protein is usually assessed by the difference of the Gibbs free energy between the mutated and wild-type form protein, denoted $\Delta\Delta$G (denoted \texttt{score} in the dataset).
+Understanding the mechanisms in protein stability is important, since even a single amino acid mutation can be the cause of a disease. The effect of a mutation on a protein is usually assessed by the difference of the Gibbs free energy between the mutated and wild-type form protein, denoted $\Delta\Delta$G (denoted \texttt{score} in the dataset). Protein mutation experiments which measure \dd G, are expensive and time-consuming, therefore predictive methods using simulation or machine learning have been developed. There are a few simulation methods, including the computation of force fields in molecular dynamics \citep{Brooks}, but these methods are often computationally expensive for large datasets. Therefore, machine learning methods have been developed, including Graph neural networks which use atomic and bond information of the protein \citep{Wang2021}, dense neural networks which take as input the protein ID and mutation type \citep{Alvarez-Machancoses}, and anti-symmetric neural networks \citep{Benevenuta_2021} which can make better predictions for reverse mutations. Here we will be using Long Short Term Memory (LSTM) networks \citep{lstm}, which are known to work well for sequence data.
 
 \textbf{Exploratory data analysis.} We should explore the dataset first in order to find which variables have a high predictive power of $\Delta\Delta$G. There are 310 different wildtype proteins (\texttt{pdbid}) which isn't much, this means it would be harder for machine learning models to generalize to ``unseen" protein structures. But there are 340k data points which should be enough for a neural network to perform well given we design it carefully. We also make a number of plots with descriptions, in Figure \ref{fig:lenpos} we show the dependance of \dd G with protein length and mutation position. Figure \ref{fig:wildtype} shows the \dd G dependance on the wildtype, and Figure \ref{fig:mutation} shows the dependance on the amino acid mutation.
 
 \begin{figure}[!htb]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{plots/protein_lengths.png}
         \caption{$\Delta\Delta$G vs protein length}
         \label{fig:lengths}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{plots/mutation_position.png}
         \caption{$\Delta\Delta$G vs mutation position}
@@ -79,18 +79,21 @@ Understanding the mechanisms in protein stability is important, since even a sin
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.8\textwidth]{lstm.pdf}
-    \caption{\label{fig:lstm}LSTM model used for predicintg $\Delta\Delta$G. The inputs are one-hot encodings of the amino acid sequence, with a -1 inserted for the wild type amino acid.}
+    \caption{\label{fig:lstm}LSTM model used for predicintg $\Delta\Delta$G. The inputs are one-hot encodings of the amino acid sequence, with a $-1$ inserted for the wild type amino acid. This makes the one-hot mutation anti-symmetric, i.e the swapping operation $S$ on the one-hot mutation $x$ gives $Sx = -x$.}
 \end{figure}
 \FloatBarrier
 
-\textbf{Model.} We will be using Long Short Term Memory (LSTM) neural networks, which have been proven to work well at encoding and making predictions on sequence data. A LSTM can remember information over a wide range of intervals throughout the sequence, this is important since the protein structure (and therefore $\Delta\Delta$G) depends on short and long range electrostatic interactions. We will be using 1 recurrent LSTM cell from which the final output is applied onto 2 Dense layers which results in the final predicted $\Delta\Delta$G, see Figure \ref{fig:lstm}. In total, there are 50k parameters in the model. To aid with anti-symmetry, we do an elementwise multiplication of the mutant amino acid with the output of the first dense layer (with no bias), i.e. $Wx = -W(-x)$, where $W$ is the weight matrix and $x$ is the one-hot mutant. We may also use anti-symmetric activation functions (e.g. tanh) and no bias on the LSTM cells to further aid anti-symmetry, but for some reason the models train a lot slower, so we ended up not doing that.
+\textbf{Model.} We will be using Long Short Term Memory (LSTM) neural networks, which have been proven to work well at encoding and making predictions on sequence data (see \cite{lstmwiki} for an overview). A LSTM can remember information over a wide range of intervals throughout the sequence, this is important since the protein structure (and therefore $\Delta\Delta$G) depends on short and long range electrostatic interactions.
+
+To start off, we should use simple models to minimize the number of assumptions, thereby improving generalizability. We will be using 1 recurrent LSTM cell from which the final output is applied onto 2 Dense layers which results in the final predicted $\Delta\Delta$G, see Figure \ref{fig:lstm}. In total, there are 50k parameters in the model. To aid with anti-symmetry, we do an elementwise multiplication of the mutant amino acid with the output of the first dense layer (with no bias). We may also use anti-symmetric activation functions (e.g. tanh) and no bias on the LSTM cells to further aid anti-symmetry, but for some reason, this leads to a bug which trains the models a lot slower, so we ended up not doing that.
 
 \section{Experiment description}
 
-To correctly test our model's generalizability to unseen protein structures, the training and test datasets contain entirely different protein structures (\texttt{pdbid}). As a further generalizability test, we also predict the energy change for the test set when the wildtype (W) and mutant (M) amino acid is reversed which should give \dd G(W$\rightarrow$M)=$-$\dd G(M$\rightarrow$W).
+To correctly test our model's generalizability to unseen protein structures, the training and test datasets contain entirely different protein structures (\texttt{pdbid}). As a further generalizability test, we also predict the energy change for the test set when the wildtype (W) and mutant (M) amino acid is reversed which should give \dd G(W$\rightarrow$M)=$-$\dd G(M$\rightarrow$W). We test the model with and without the elementwise multiplication in Figure \ref{fig:lstm}, called LSTM and anti-symmetric LSTM, both trained separately.
 
-A commonly used metric to measured the performance of models for predicting \dd G is the root mean square error (RMSE) in combination with the pearson correlation coefficient, r, which are both insufficient on their own. Together they provide a better metric to evaluate the performance for a wide range of \dd G.
+A commonly used metric to measured the performance of models for predicting \dd G is the root mean square error (RMSE) in combination with the pearson correlation coefficient, r. Together they provide a better metric to evaluate the performance for a wide range of \dd G.
 
+\clearpage
 \section{Result Analysis}
 
 Figure \ref{fig:lstme}-\ref{fig:lstmae} shows the results for the (non)anti-symmetric models. We get a (RMSE, r) of (0.89, 0.48) and (0.93, 0.51). For comparison, the graph-NN from \citep{Wang2021} has (1.23, 0.61) but trained on a smaller dataset, so our model isn't that bad! But for predicting the reverse energies, Figure \ref{fig:lstmre}-\ref{fig:lstmare} shows a (RMSE, r) of (1.9, 0.1) and (1.8, 0.14), the anti-symmetric model does slightly better but they both seem to be pretty bad at generalizing to reverse energies, which is most likely due to the non-anti-symmetric LSTM cells. In comparison, \citep{Wang2021} has (1.27,0.48) for predicting reverse energies.
