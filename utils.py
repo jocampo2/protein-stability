@@ -7,6 +7,7 @@ from keras.layers import Dense, Input, LSTM
 from keras.models import Model
 import pandas as pd
 from matplotlib.lines import Line2D
+from typing import Iterable
 
 # The 20 amino acids in the dataset
 alphabet = [
@@ -302,6 +303,38 @@ def plot_errors(
     plt.legend(handles=legend_elements)
 
     if savefile:
+        plt.savefig(
+            savefile, bbox_inches="tight", facecolor="white", transparent=False, dpi=150
+        )
+    plt.show()
+
+
+def plot_2d_hist(
+    x: Iterable[float],
+    y: Iterable[float],
+    xlabel: str = "$\Delta\Delta G$",
+    ylabel: str = "",
+    savefile: str = None,
+):
+    """Plot normalized 2D histograms for ddG"""
+
+    plt.rcParams.update({"font.size": 14})
+
+    # Get histogram of score vs length
+    hist, xedges, yedges = np.histogram2d(x, y, bins=25)
+    hist = hist[:, :].T
+
+    # Normalize each row by the max
+    hist = hist / hist.max(axis=1, keepdims=True)
+
+    # Plot the histogram
+    plt.pcolormesh(xedges, yedges, hist)
+    cbar = plt.colorbar()
+    cbar.ax.set_ylabel("Counts")
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    if savefile is not None:
         plt.savefig(
             savefile, bbox_inches="tight", facecolor="white", transparent=False, dpi=150
         )
