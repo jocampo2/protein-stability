@@ -8,6 +8,7 @@ from keras.models import Model
 import pandas as pd
 from matplotlib.lines import Line2D
 from typing import Iterable
+from math import ceil
 
 # The 20 amino acids in the dataset
 alphabet = [
