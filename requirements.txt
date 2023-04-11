@@ -1,0 +1,9 @@
+nglview==3.0.3
+ipywidgets==7.6.0
+py3dmol==2.0.0.post2
+matplotlib>=3.5.2
+tqdm>=4.64.0
+scipy>=1.8.1
+tensorflow>=2.9.2
+pandas>=1.4.3
+scikit-learn>=1.2.0 
